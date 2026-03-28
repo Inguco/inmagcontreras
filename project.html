@@ -1,0 +1,385 @@
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  Mail,
+  Linkedin,
+  ArrowRight,
+  Briefcase,
+  Sparkles,
+  BarChart3,
+  Users,
+  Wrench,
+  Globe,
+} from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
+
+const strengths = [
+  {
+    icon: BarChart3,
+    title: "Operations & Reporting",
+    text: "I create structure, dashboards, reporting flows, and practical visibility for teams and leadership.",
+  },
+  {
+    icon: Users,
+    title: "Enablement & Coordination",
+    text: "I connect stakeholders, align priorities, and help initiatives move from idea to execution.",
+  },
+  {
+    icon: Sparkles,
+    title: "Process Improvement",
+    text: "I simplify ways of working, improve consistency, and bring clarity to complex business activities.",
+  },
+  {
+    icon: Wrench,
+    title: "Tools & Systems",
+    text: "Experienced with Excel, reporting logic, onboarding flows, knowledge spaces, HR systems, and AI-assisted work.",
+  },
+];
+
+const roles = [
+  {
+    company: "VML MAP",
+    title: "Admin Coordinator | Operations & Enablement",
+    period: "Current role",
+    bullets: [
+      "Built operational structure across internal initiatives, knowledge-sharing activities, and community coordination.",
+      "Created dashboards, certification tracking, and reporting overviews to increase leadership visibility.",
+      "Supported presentations, communications, town halls, onboarding-related activities, and process consistency across teams.",
+    ],
+  },
+  {
+    company: "Milestone Systems",
+    title: "People & Culture Coordinator",
+    period: "Previous role",
+    bullets: [
+      "Supported global HR operations, planning, communication, and cross-functional coordination in an international environment.",
+      "Worked closely with stakeholders across teams, helping maintain structured processes and people-related operations.",
+      "Contributed to initiatives requiring discretion, follow-up, organization, and strong service orientation.",
+    ],
+  },
+  {
+    company: "Milestone Systems",
+    title: "Sales Coordinator",
+    period: "Previous role",
+    bullets: [
+      "Worked between Sales, IT, and technical teams to support operational continuity and internal systems usage.",
+      "Acted as key user in Navision and Business Central, supporting structure, migration-related tasks, and process improvement.",
+      "Strengthened cross-team collaboration by connecting business needs with operational execution.",
+    ],
+  },
+];
+
+const impact = [
+  "Designed practical reporting and Excel-based visibility tools when formal solutions were not yet available.",
+  "Helped structure internal knowledge, communications, and recurring processes to make initiatives more scalable.",
+  "Supported large internal sessions, presentations, and engagement activities across international teams.",
+  "Combined business coordination, people operations understanding, and continuous improvement thinking in day-to-day work.",
+];
+
+const tools = [
+  "Excel",
+  "PowerPoint",
+  "Word",
+  "Teams",
+  "SharePoint",
+  "HiBob",
+  "Business Central",
+  "Navision",
+  "AI tools",
+  "Reporting & KPI overviews",
+  "Cross-functional coordination",
+  "Process standardization",
+];
+
+export default function InmaProWebsite() {
+  return (
+    <div className="min-h-screen bg-[#f6f1ea] text-[#3a2f28]">
+      <section className="relative overflow-hidden border-b border-[#dfd2c4] bg-[#f3ece3]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(186,160,128,0.18),transparent_28%),radial-gradient(circle_at_top_left,rgba(120,92,62,0.08),transparent_24%)]" />
+        <div className="relative mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl"
+          >
+            <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#d8c8b8] bg-[#f8f3ee] px-4 py-2 text-sm text-[#6e5a49] shadow-sm">
+              <Briefcase className="h-4 w-4" /> Business Operations • Enablement • Coordination
+            </p>
+            <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl text-[#2f241d]">
+              Inmaculada G. Contreras
+            </h1>
+            <p className="mt-4 max-w-3xl text-lg leading-8 text-[#5f4d40] sm:text-xl">
+              I bring structure to complex business initiatives through operations, enablement,
+              reporting, and cross-functional coordination.
+            </p>
+            <p className="mt-6 max-w-3xl text-base leading-7 text-[#6e5a49]">
+              My experience spans people operations, business coordination, internal enablement,
+              reporting, and process improvement in international environments. I help teams move
+              from ideas to organized execution.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Button asChild size="lg" className="rounded-2xl bg-[#8b6b4f] px-6 text-white hover:bg-[#76583f]">
+                <a href="mailto:inmaculada.g.contreras@gmail.com">
+                  Get in touch <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="rounded-2xl border-[#cbb7a4] bg-transparent px-6 text-[#5f4d40] hover:bg-[#efe4d8]"
+              >
+                <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
+                  View LinkedIn
+                </a>
+              </Button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 py-16 lg:px-8">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
+          transition={{ duration: 0.5 }}
+          className="mb-8 max-w-3xl"
+        >
+          <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#8a7460]">Core strengths</p>
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#2f241d]">What I bring</h2>
+        </motion.div>
+
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          {strengths.map((item, index) => {
+            const Icon = item.icon;
+            return (
+              <motion.div
+                key={item.title}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                transition={{ duration: 0.45, delay: index * 0.05 }}
+              >
+                <Card className="h-full rounded-3xl border-[#e0d3c6] bg-[#fbf8f4] shadow-sm">
+                  <CardContent className="p-6">
+                    <div className="mb-4 inline-flex rounded-2xl bg-[#efe4d8] p-3 text-[#7b624d]">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-[#2f241d]">{item.title}</h3>
+                    <p className="mt-3 text-sm leading-6 text-[#6e5a49]">{item.text}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className="border-y border-[#dfd2c4] bg-[#fcfaf7]">
+        <div className="mx-auto grid max-w-6xl gap-12 px-6 py-16 lg:grid-cols-[1fr_1.2fr] lg:px-8">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            transition={{ duration: 0.5 }}
+          >
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#8a7460]">Profile</p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#2f241d]">
+              A professional profile built around structure and execution
+            </h2>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            transition={{ duration: 0.55 }}
+            className="space-y-5 text-base leading-8 text-[#5f4d40]"
+          >
+            <p>
+              My professional journey has evolved across operations, people coordination,
+              reporting, and business support roles. Over time, I have built a strong ability to
+              connect teams, organize moving parts, and create clarity where structure is needed.
+            </p>
+            <p>
+              I work especially well in environments where collaboration, visibility, and
+              follow-through matter. I enjoy bringing order to complex initiatives, improving
+              workflows, and supporting teams with practical execution.
+            </p>
+            <p>
+              Today, I position myself as a business support and operations professional with a
+              strong enablement mindset: someone who helps ideas become organized, actionable, and visible.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 py-16 lg:px-8">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
+          transition={{ duration: 0.5 }}
+          className="mb-8 max-w-3xl"
+        >
+          <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#8a7460]">Experience</p>
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#2f241d]">Selected career journey</h2>
+        </motion.div>
+
+        <div className="space-y-6">
+          {roles.map((role, index) => (
+            <motion.div
+              key={`${role.company}-${role.title}`}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeUp}
+              transition={{ duration: 0.45, delay: index * 0.05 }}
+            >
+              <Card className="rounded-3xl border-[#e0d3c6] bg-[#fbf8f4] shadow-sm">
+                <CardContent className="p-7">
+                  <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                    <div>
+                      <h3 className="text-xl font-semibold text-[#2f241d]">{role.title}</h3>
+                      <p className="mt-1 text-[#6e5a49]">{role.company}</p>
+                    </div>
+                    <span className="rounded-full bg-[#efe4d8] px-4 py-1 text-sm text-[#6e5a49]">
+                      {role.period}
+                    </span>
+                  </div>
+                  <ul className="mt-5 space-y-3 text-sm leading-7 text-[#5f4d40]">
+                    {role.bullets.map((bullet) => (
+                      <li key={bullet} className="flex gap-3">
+                        <span className="mt-2 h-2 w-2 rounded-full bg-[#a88a6d]" />
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      <section className="border-y border-[#dfd2c4] bg-[#f2ebe3]">
+        <div className="mx-auto grid max-w-6xl gap-10 px-6 py-16 lg:grid-cols-2 lg:px-8">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            transition={{ duration: 0.5 }}
+          >
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#8a7460]">Impact</p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#2f241d]">How I add value</h2>
+            <div className="mt-6 space-y-4">
+              {impact.map((item, idx) => (
+                <div
+                  key={item}
+                  className="rounded-2xl border border-[#e0d3c6] bg-[#fbf8f4] p-5 text-sm leading-7 text-[#5f4d40] shadow-sm"
+                >
+                  <span className="mr-3 inline-flex h-7 w-7 items-center justify-center rounded-full bg-[#8b6b4f] text-xs font-semibold text-white">
+                    {idx + 1}
+                  </span>
+                  {item}
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            transition={{ duration: 0.55 }}
+          >
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#8a7460]">Tools & capabilities</p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#2f241d]">Practical skills</h2>
+            <div className="mt-6 flex flex-wrap gap-3">
+              {tools.map((tool) => (
+                <span
+                  key={tool}
+                  className="rounded-full border border-[#d5c6b7] bg-[#fbf8f4] px-4 py-2 text-sm text-[#5f4d40] shadow-sm"
+                >
+                  {tool}
+                </span>
+              ))}
+            </div>
+            <Card className="mt-8 rounded-3xl border-[#e0d3c6] bg-[#fbf8f4] shadow-sm">
+              <CardContent className="p-7">
+                <div className="flex items-start gap-4">
+                  <Globe className="mt-1 h-5 w-5 text-[#7b624d]" />
+                  <div>
+                    <h3 className="text-lg font-semibold text-[#2f241d]">International mindset</h3>
+                    <p className="mt-2 text-sm leading-7 text-[#6e5a49]">
+                      I have worked in international environments and across different business
+                      functions, supporting diverse stakeholders and adapting communication to
+                      different audiences and needs.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 py-16 lg:px-8">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
+          transition={{ duration: 0.5 }}
+          className="rounded-[2rem] border border-[#dfd2c4] bg-[#fcfaf7] p-8 shadow-sm lg:p-12"
+        >
+          <div className="max-w-3xl">
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#8a7460]">Contact</p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#2f241d]">Do you want to get in touch?</h2>
+            <p className="mt-4 text-base leading-8 text-[#5f4d40]">
+              I am interested in opportunities where I can contribute through business support,
+              operations, enablement, process coordination, reporting, and structured execution.
+            </p>
+          </div>
+
+          <div className="mt-8 flex flex-wrap gap-4">
+            <Button asChild size="lg" className="rounded-2xl bg-[#8b6b4f] px-6 text-white hover:bg-[#76583f]">
+              <a href="mailto:inmaculada.g.contreras@gmail.com">
+                <Mail className="mr-2 h-4 w-4" />
+                inmaculada.g.contreras@gmail.com
+              </a>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="rounded-2xl border-[#cbb7a4] bg-transparent px-6 text-[#5f4d40] hover:bg-[#efe4d8]"
+            >
+              <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
+                <Linkedin className="mr-2 h-4 w-4" />
+                LinkedIn
+              </a>
+            </Button>
+          </div>
+        </motion.div>
+      </section>
+    </div>
+  );
+}
